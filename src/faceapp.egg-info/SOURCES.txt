@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.cfg
+src/faceapp/__init__.py
+src/faceapp/app.py
+src/faceapp/camera.py
+src/faceapp/cli.py
+src/faceapp/enroll.py
+src/faceapp/recognize.py
+src/faceapp.egg-info/PKG-INFO
+src/faceapp.egg-info/SOURCES.txt
+src/faceapp.egg-info/dependency_links.txt
+src/faceapp.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_db.py
+tests/test_preproc.py

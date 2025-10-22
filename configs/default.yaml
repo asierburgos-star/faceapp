@@ -1,0 +1,26 @@
+
+---
+
+# `configs/default.yaml` (parámetros fuera del código)
+
+```yaml
+camera:
+  index: 0
+  width: 1280
+  height: 720
+  fourcc: "MJPG"
+  target_fps: 25
+
+deepface:
+  model_name: "ArcFace"
+  detector_backend: "skip"   # usamos preproc propio
+  cosine_threshold: 0.35
+
+pipeline:
+  process_every_n: 2
+  stability_frames: 5
+  min_focus: 60.0
+  output_size: 112
+
+paths:
+  db_path: "data/embeddings_db.json"

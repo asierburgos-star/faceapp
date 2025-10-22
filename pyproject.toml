@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faceapp"
+version = "0.1.0"
+description = "Face recognition demo (OpenCV + preproc + DeepFace) con CLI profesional"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{ name = "Asier Burgos", email = "asier.burgos@opendeusto.es" }]
+
+dependencies = [
+  "opencv-python>=4.9",
+  "numpy>=1.24",
+  "deepface>=0.0.92",
+  "typer>=0.12",           # CLI elegante
+  "rich>=13.7",            # salida bonita
+  "pyyaml>=6.0"            # configs
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "black>=24.0",
+  "isort>=5.13",
+  "flake8>=7.0",
+  "pre-commit>=3.6"
+]
+
+[project.scripts]
+faceapp = "faceapp.cli:app"   # <- un único comando para el usuario
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
